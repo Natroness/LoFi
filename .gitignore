@@ -1,0 +1,43 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# ML / generated artifacts
+backend/models/*.keras
+backend/models/checkpoint.keras
+backend/data/processed/notes.csv
+backend/outputs/*.mid
+backend/outputs/*.wav
+backend/outputs/training_loss.png
+
+# Keep directory structure (optional placeholders)
+!backend/data/raw_midi/.gitkeep
+!backend/data/processed/.gitkeep
+!backend/models/.gitkeep
+!backend/outputs/.gitkeep
+
+# IDE / OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Env secrets
+.env
+.env.*
