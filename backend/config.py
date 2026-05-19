@@ -18,8 +18,9 @@ OUTPUT_MIDI    = OUTPUTS_DIR / "generated.mid"
 OUTPUT_WAV     = OUTPUTS_DIR / "generated.wav"
 
 # Soundfont (for FluidSynth / midi2audio)
-SOUNDFONT_PATH = Path("/usr/share/sounds/sf2/FluidR3_GM.sf2")  # override as needed
-
+SOUNDFONT_PATH = Path(
+    "/opt/homebrew/Cellar/fluid-synth/2.5.4/share/fluid-synth/sf2/VintageDreamsWaves-v2.sf2"
+)
 # Hyperparameters
 SEQUENCE_LENGTH   = 50
 EPOCHS            = 50
