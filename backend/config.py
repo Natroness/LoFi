@@ -17,10 +17,9 @@ OUTPUTS_DIR    = BASE_DIR / "outputs"
 OUTPUT_MIDI    = OUTPUTS_DIR / "generated.mid"
 OUTPUT_WAV     = OUTPUTS_DIR / "generated.wav"
 
-# Soundfont (for FluidSynth / midi2audio)
-SOUNDFONT_PATH = Path(
-    "/opt/homebrew/Cellar/fluid-synth/2.5.4/share/fluid-synth/sf2/VintageDreamsWaves-v2.sf2"
-)
+# Soundfont — project-local takes priority; fallbacks resolved in wav_converter._soundfont()
+SOUNDFONTS_DIR = BASE_DIR / "soundfonts"
+SOUNDFONT_PATH = SOUNDFONTS_DIR / "FluidR3_GM.sf2"
 # Hyperparameters
 SEQUENCE_LENGTH   = 50
 EPOCHS            = 50
@@ -31,5 +30,5 @@ TEMPERATURE       = 1.0
 TEMPO             = 90.0   # BPM
 
 # Ensure required directories exist
-for _dir in (RAW_MIDI_DIR, PROCESSED_DIR, MODELS_DIR, OUTPUTS_DIR):
+for _dir in (RAW_MIDI_DIR, PROCESSED_DIR, MODELS_DIR, OUTPUTS_DIR, SOUNDFONTS_DIR):
     _dir.mkdir(parents=True, exist_ok=True)
